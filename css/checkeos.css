@@ -1,0 +1,127 @@
+/*
+ * 7/05/2013 - Estilos propios del plugin Chequeos
+ -------------------------------------------------------------------------
+ Javier David Marín Zafrilla
+ -------------------------------------------------------------------------
+
+ LICENSE
+
+ This file is part of GLPI.
+
+ GLPI is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+
+ GLPI is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with GLPI. If not, see <http://www.gnu.org/licenses/>.
+ --------------------------------------------------------------------------
+*/
+/* ################--------------- GLPI CSS style   ---------------#################### */
+
+
+/* Estilo campo url_elemento del fromulario  */
+input[type=text], input[type=password], input[type=number] {
+   background-color:rgba(224, 255, 255, 0.8);  
+   color: black;
+   border: 1px solid #D3D3D3;
+   font-size: 13px;
+   border-radius: 3px;
+   padding_left: 7px;
+   width: 98%; 
+   height:25px;
+}
+
+textarea {    
+ background-color:rgba(201, 241, 205, 0.5);  
+   color: black;
+   border: 1px solid #D3D3D3;
+   font-size: 11px;
+   border-radius: 3px;
+   padding: 7px;
+   width: 97.5%; 
+	
+}	
+
+input[name=_begin_date], input[name=_end_date]  {    
+width: 90%; 
+}	
+
+select {
+   font-size: 11px;
+   color: black;
+   background-color: rgba(224, 255, 255, 0.8);
+   line-height: 19px; /* do not set height because using multiple select*/
+  border: 1px solid #bbb;
+}
+
+.select2-choice  {
+   background: rgba(201, 241, 205, 0.5) !important;
+   border: 1px solid #D3D3D3 !important;
+  * width:300px;
+}
+.select2-drop {
+   max-width: 500px;
+   word-break: break-all;
+}
+.select2-dropdown-open .select2-choice {
+   border: 1px solid #D3D3D3 !important;
+}
+.select2-arrow {
+   background: #FCFCFC !important;
+   border: 0 !important;
+}
+
+.select2-container .select2-choice {
+   position: relative;
+   text-overflow: clip;
+   background-color: #FFF;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   padding-left: 1em;
+   max-width: 270px;
+}
+
+.select2-container .select2-choice:before {
+   content: '\02026';
+   position: absolute;
+   z-index: 1;
+   left: -1em;
+   background-color: inherit;
+   padding-left: 1em;
+   margin-left: .5em;
+   background-color: inherit;
+   line-height: 26px;
+   margin-top: -2px;
+}
+
+.select2-container .select2-choice > .select2-chosen {
+   min-width: 100%;
+   position: relative;
+   display: inline-block;
+   float: right;
+   overflow: visible;
+   text-indent: .5em;
+   background-color: inherit;
+   margin-right: 0;
+   padding-right: 26px;
+   box-sizing: border-box;
+}
+
+.select2-container .select2-choice > .select2-chosen:before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 1em;
+  background-color: inherit;
+  z-index: 2;
+  left: -.5em;
+  height: 26px;
+  margin-top: -2px;
+}

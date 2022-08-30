@@ -1,0 +1,12 @@
+Versión 1.2.2 - 16-06-2017
+---------------------------
+Cambios para la instalación en la versión 9.4.X
+Nuevo fichero version.txt
+Modificado /avisos/setup.php
+
+
+Versión 1.2.3 - 29-08-2022
+---------------------------
+Cambios para la instalación en la versión 9.5.X
+Nuevo fichero version.txt
+Modificado /avisos/setup.php

@@ -1,0 +1,111 @@
+<root>
+   <name>Chequeos</name>
+   <key>Chequeos</key>
+   <state>stable</state>
+   <logo>https://raw.githubusercontent.com/calidadcarm/chequeos/main/imagenes/icon_plugin.png</logo>
+   <description>
+      <short>
+         <es>Plugin Chequeos para GLPI. El plugin Chequeos le permite enviar por correo electrónico un listado elementos mediante una query.</es>
+         <en>Checks plugin for GLPI. The Checkouts plugin allows you to email a list of items via a query.</en>
+         <fr>Vérifie le plugin pour GLPI. Le plugin Checkouts vous permet d'envoyer par e-mail une liste d'éléments via une requête.</fr>
+      </short>
+      <long>
+         <es>
+El plugin Chequeos le permite crear advertencias en forma de listado, enviadas por correo electrónico sobre objetos que cumplan una serie de condiciones definidas en una Query...
+
+Mediante una simple consulta en base de datos podemos enviar un listado de elementos, el único requisito es que su consulta tiene que devolver tres campos:
+
+'id_elemento': sería el id del objeto
+'detalle_elemento': incluye el nombre del elemento y algún valor que necesite mediante la función concat
+'email_elemento': El correo electrónico al que se enviará el listado.
+
+Para facilitar el rendimiento del plugin, si se va a enviar a distintos correos es conveniente hacer un goup by email_elemento
+
+En la instalación del plugin se crea una acción automática llamada ChequeosCron
+
+Puedes configurar el chequeo con: 
+
+Activo, calendario, periocidad, creación preliminar, fecha inicial y final, remitente y dirección del remitente
+
+         </es>
+         <en>
+The Checks plugin allows you to create warnings in the form of a list, sent by email on objects that meet a series of conditions defined in a Query...
+
+Through a simple database query we can send a list of elements, the only requirement is that your query has to return three fields:
+
+'id_elemento': it would be the id of the object
+'detalle_elemento': includes the name of the element and any value you need using the concat function
+'email_elemento': The email to which the list will be sent.
+
+To facilitate the performance of the plugin, if it is going to be sent to different emails, it is convenient to make a goup by email_element
+
+In the installation of the plugin, an automatic action called ChequeosCron is created
+
+You can configure the check with:
+
+Active, calendar, periodicity, preliminary creation, start and end date, sender and sender address
+         </en>
+         <fr>
+Le plugin Checks permet de créer des alertes sous forme de liste, envoyées par email sur des objets répondant à une série de conditions définies dans une requête...
+
+Grâce à une simple requête de base de données, nous pouvons envoyer une liste d'éléments, la seule exigence est que votre requête doit renvoyer trois champs :
+
+'id_elemento' : ce serait l'identifiant de l'objet
+'detalle_elemento' : inclut le nom de l'élément et toute valeur dont vous avez besoin à l'aide de la fonction concat
+'email_elemento' : l'adresse e-mail à laquelle la liste sera envoyée.
+
+Pour faciliter les performances du plugin, s'il va être envoyé à différents emails, il est pratique de faire un groupe par email_element
+
+Lors de l'installation du plugin, une action automatique appelée CheckCron est créée
+
+Vous pouvez configurer la vérification avec :
+
+Actif, calendrier, périodicité, création préliminaire, date de début et de fin, expéditeur et adresse de l'expéditeur
+         </fr>
+      </long>
+   </description>
+   <homepage>https://github.com/calidadcarm/chequeos/</homepage>
+   <download>https://github.com/calidadcarm/chequeos/releases/</download>
+   <issues>https://github.com/calidadcarm/chequeos/issues</issues>
+   <readme>https://github.com/calidadcarm/chequeos/blob/main/README.md</readme>
+   <authors>
+      <author>CARM</author>
+   </authors>
+   <versions>
+      <version>
+         <num>1.2.2</num>
+         <compatibility>~9.4.6</compatibility>
+         <download_url>https://github.com/calidadcarm/chequeos/releases/tag/Chequeos_1.2.2_Glpi_9.4.x</download_url>
+      </version>
+      <version>
+         <num>1.2.3</num>
+         <compatibility>~9.5.8</compatibility>
+         <download_url>https://github.com/calidadcarm/chequeos/releases/tag/Chequeos_1.2.3_Glpi_9.5.x</download_url>
+      </version>      
+   </versions>
+   <langs>
+      <lang>es_ES</lang>
+   </langs>
+   <license>AGPL3</license>
+   <tags>
+      <es>
+         <tag>Chequeos</tag>
+         <tag>Tests</tag> 
+         <tag>Comprobaciones</tag>         
+      </es>
+      <en>
+         <tag>Checkups</tag>
+         <tag>Checks</tag>
+         <tag>Testing</tag>
+      </en>
+      <fr>
+         <tag>Chèques</tag>
+         <tag>Essais</tag>
+         <tag>Bilans de santé</tag>
+      </fr>
+   </tags>
+   <screenshots>
+      <screenshot>https://raw.githubusercontent.com/calidadcarm/chequeos/main/imagenes/screenshot.png</screenshot>
+      <screenshot>https://raw.githubusercontent.com/calidadcarm/chequeos/main/imagenes/screenshot2.png</screenshot>
+   </screenshots>
+</root>
