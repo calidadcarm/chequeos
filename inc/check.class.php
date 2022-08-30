@@ -32,6 +32,10 @@ const CONFIG_PARENT   = - 2;
    }
 
 
+   static function getIcon() {
+		return "fas fa-calendar-check";
+	}
+
    static function displayTabContentForItem(CommonGLPI $item, $tabnum=1, $withtemplate=0) {
 
       switch ($item->getType()) {
@@ -333,10 +337,10 @@ const CONFIG_PARENT   = - 2;
 	  echo "<textarea name='consulta' cols='90' rows='9' style='width:98%'>".
             $this->fields["consulta"]."</textarea>";
       echo "</td></tr>";		
-
+      
 	  //Fila para el pie del email
 	  echo "<tr class='tab_bg_1'>";
-	  echo "<th>".__('Pie')."</th>";
+	  echo "<th>".__('Pie', 'checks')."</th>";
 	  echo "<td colspan='4'>";
 	  echo "<textarea name='pie' cols='90' rows='6' style='width:98%'>".
             $this->fields["pie"]."</textarea>";
@@ -539,7 +543,7 @@ const CONFIG_PARENT   = - 2;
          'id'                 => '112',
          'table'              => $this->getTable(),
          'field'              => 'pie',
-         'name'               =>  __('Pie'),
+         'name'               =>  __('Pie', 'checks'),
          'datatype'           => 'textarea',
       ];	
 	  
@@ -1286,6 +1290,7 @@ static function getMenuContent() {
       $menu                                           = array();
       $menu['title']                                  = self::getMenuName();
       $menu['page']                                   = "/plugins/checks/front/check.php";
+      $menu['icon']                                   = self::getIcon();
 	  
 	  if (Session::haveRight('plugin_checks', CREATE)){
 			$menu['links']['add']      = '/plugins/checks/front/check.form.php';

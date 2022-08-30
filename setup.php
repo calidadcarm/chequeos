@@ -61,7 +61,7 @@ function plugin_init_checks() {
 function plugin_version_checks() {
 
    return array('name'          => _n('Chequeos' , 'Chequeos' ,2, 'checks'),
-                'version'        => '1.2.2',
+                'version'        => '1.2.3',
                 'license'        => 'AGPL3',
                 'author'         => '<a href="https://www.carm.es" target="_blank" >CARM</a>',
                 'homepage'       => 'http://www.carm.es',

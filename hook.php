@@ -55,6 +55,10 @@ function plugin_checks_install() {
   {
 	CronTask::Register('PluginChecksCheck', 'ChequeosCron', 3600, array('param' => 24, 'mode' => 2));
   }
+
+  PluginChecksProfile::initProfile();
+  PluginChecksProfile::createFirstAccess($_SESSION['glpiactiveprofile']['id']);  	
+
    return true;
 }
 
