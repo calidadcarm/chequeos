@@ -25,7 +25,7 @@ En la instalación del plugin se crea una acción automática llamada ChequeosCr
 
 Puedes configurar el chequeo con: 
 
-Activo, calendario, periocidad, creación preliminar, fecha inicial y final, remitente y dirección del remitente
+Activo, calendario, periocidad, creación preliminar, fecha inicial y final, remitente y dirección del remitente.
 
          </es>
          <en>
@@ -43,7 +43,7 @@ In the installation of the plugin, an automatic action called ChequeosCron is cr
 
 You can configure the check with:
 
-Active, calendar, periodicity, preliminary creation, start and end date, sender and sender address
+Active, calendar, periodicity, preliminary creation, start and end date, sender and sender address.
          </en>
          <fr>
 Le plugin Checks permet de créer des alertes sous forme de liste, envoyées par email sur des objets répondant à une série de conditions définies dans une requête...
@@ -60,7 +60,7 @@ Lors de l'installation du plugin, une action automatique appelée CheckCron est 
 
 Vous pouvez configurer la vérification avec :
 
-Actif, calendrier, périodicité, création préliminaire, date de début et de fin, expéditeur et adresse de l'expéditeur
+Actif, calendrier, périodicité, création préliminaire, date de début et de fin, expéditeur et adresse de l'expéditeur.
          </fr>
       </long>
    </description>

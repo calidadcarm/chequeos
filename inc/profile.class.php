@@ -56,10 +56,10 @@ class PluginChecksProfile extends Profile {
       foreach ($rights as $right => $value) {
 		  
 		  $criteria = [
-"profiles_id" => $profiles_id,
-"name" => $right,
-];
-		  
+                     "profiles_id" => $profiles_id,
+                     "name" => $right,
+                    ];         
+
          if (countElementsInTable('glpi_profilerights',
                                    $criteria) && $drop_existing) {
             $profileRight->deleteByCriteria($criteria);
@@ -69,7 +69,7 @@ class PluginChecksProfile extends Profile {
             $myright['profiles_id'] = $profiles_id;
             $myright['name']        = $right;
             $myright['rights']      = $value;
-            $profileRight->add($myright);
+            $profileRight->add($myright);            
 
             //Add right to the current session
             $_SESSION['glpiactiveprofile'][$right] = $value;
@@ -151,33 +151,27 @@ class PluginChecksProfile extends Profile {
       }
    }
       
+
    /**
    * Initialize profiles, and migrate it necessary
    */
-   static function initProfile() {
-      global $DB;
-      $profile = new self();
+  static function initProfile() {
+   global $DB;
+   $profile = new self();
 
-      //Add new rights in glpi_profilerights table
-      foreach ($profile->getAllRights(true) as $data) {
-		  
-		  $criteria = [
-"name" => $data['field'],
-];		  
-		  
-         if (countElementsInTable("glpi_profilerights", 
-                                  $criteria) == 0) {
-            ProfileRight::addProfileRights(array($data['field']));
-         }
-      }
-      foreach ($DB->request("SELECT *
-                           FROM `glpi_profilerights` 
-                           WHERE `profiles_id`='".$_SESSION['glpiactiveprofile']['id']."' 
-                              AND `name` LIKE '%plugin_checks%'") as $prof) {
-         $_SESSION['glpiactiveprofile'][$prof['name']] = $prof['rights']; 
+   //Add new rights in glpi_profilerights table
+   foreach ($profile->getAllRights(true) as $data) {
+     
+     $criteria = [			
+      "name" => $data['field'],
+     ];
+     
+      if (countElementsInTable("glpi_profilerights", $criteria) == 0) {
+         ProfileRight::addProfileRights(array($data['field']));         
+
       }
    }
-
+}
    
   static function removeRightsFromSession() {
       foreach (self::getAllRights(true) as $right) {
